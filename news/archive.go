@@ -14,7 +14,7 @@ func New() Archive {
 }
 
 func (a Archive) collect(category string) {
-	sources := getSources(category)
+	sources := GetSources(category)
 	topics := getTopics(sources)
 
 	a[category] = topics

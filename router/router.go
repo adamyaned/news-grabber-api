@@ -8,5 +8,7 @@ func New() *gin.Engine {
 	r.GET("/", indexHandler)
 	r.GET("/search/:category", collectHandler)
 	r.GET("/result/:category", resultHandler)
+	r.GET("/sources/:category", sourcesHandler)
+
 	return r
 }

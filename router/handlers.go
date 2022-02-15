@@ -18,6 +18,14 @@ func collectHandler(c *gin.Context) {
 	c.String(http.StatusOK, "Search initialized")
 }
 
+func sourcesHandler(c *gin.Context) {
+	category := c.Param("category")
+
+	sources := news.GetSources(category)
+
+	c.JSON(http.StatusOK, sources)
+}
+
 func resultHandler(c *gin.Context) {
 	category := c.Param("category")
 
