@@ -5,11 +5,16 @@ News grabber API description
 
 ## API Reference
 
-#### Get all sources
+#### Get news sources
 
 ```http
-  GET /sources
+  GET /sources/${category}
 ```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `category`      | `string` | **Required**. Category of news (business, entertainment, general, health, sports, technology)|
+
 
 #### Collect news
 
