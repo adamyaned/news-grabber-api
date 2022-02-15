@@ -61,9 +61,9 @@ func getData(url string) []byte {
 }
 
 func sourceURL(category string) string {
-	return fmt.Sprintf("https://newsapi.org/v2/sources?language=en&category=%s", category)
+	return fmt.Sprintf("https://newsapi.org/v1/sources?language=en&category=%s", category)
 }
 
 func articleURL(id string) string {
-	return fmt.Sprintf("https://newsapi.org/v2/articles?source=%s&sortBy=latest&apiKey=%s", id, config.ApiKey)
+	return fmt.Sprintf("https://newsapi.org/v1/articles?source=%s&sortBy=latest&apiKey=%s", id, config.ApiKey)
 }
