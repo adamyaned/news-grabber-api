@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"news-grabber-api/config"
 )
 
 type Source struct {
@@ -64,5 +65,5 @@ func sourceURL(category string) string {
 }
 
 func articleURL(id string) string {
-	return fmt.Sprintf("https://newsapi.org/v1/articles?source=%s&sortBy=latest&apiKey=bf9a4c68daf4453c9edd9fe70fbd3b6e", id)
+	return fmt.Sprintf("https://newsapi.org/v1/articles?source=%s&sortBy=latest&apiKey=%s", id, config.ApiKey)
 }
